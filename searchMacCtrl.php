@@ -60,7 +60,7 @@ function js_thai_encode($data)
                 if($_POST['ComputerName'])
                     $cmdSql = $cmdSql." and LOWER(ComputerName) like '%".strtolower($_POST['ComputerName'])."%'";
                 if($_POST['ComputerMac'])
-                    $cmdSql = $cmdSql." and MAC_Lan like '%".$_POST['ComputerMac']."%' or MAC_Wireless like '%".$_POST['ComputerMac']."%'";
+                    $cmdSql = $cmdSql." and LOWER(MAC_Lan) like '%".strtolower($_POST['ComputerMac'])."%' or LOWER(MAC_Wireless) like '%".strtolower($_POST['ComputerMac'])."%'";
                 if($_POST['ComputerOwner'])
                     $cmdSql = $cmdSql." and LOWER(ComputerOwner) like '%".strtolower($_POST['ComputerOwner'])."%'";
 
