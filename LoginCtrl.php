@@ -1,22 +1,29 @@
 <?php
 session_start();
+include("config.php");
+
 function authenticate($user, $password) {
 	if(empty($user) || empty($password)) return false;
 
 	// Active Directory server
-	$ldap_host = "10.20.2.10";
+	//$ldap_host = "10.20.2.10";
+	$ldap_host = $GLOBALS['ldap_host'];
 
 	// Active Directory DN
-	$ldap_dn = "OU=IT-IT Promotion,OU=6.ATT,DC=attg,DC=co,DC=th";
+	//$ldap_dn = "OU=IT-IT Promotion,OU=6.ATT,DC=attg,DC=co,DC=th";
+	$ldap_dn = $GLOBALS['ldap_dn'];
 
 	// Active Directory user group
-	$ldap_user_group = "Grp-IT Promotion";
+	//$ldap_user_group = "Grp-IT Promotion";
+	$ldap_user_group = $GLOBALS['ldap_user_group'];
 
 	// Active Directory manager group
-	$ldap_manager_group = "Grp-IT Promotion";
+	$ldap_manager_group = $GLOBALS['ldap_manager_group'];
 
 	// Domain, for purposes of constructing $user
-	$ldap_usr_dom = '@attg.co.th';
+	//$ldap_usr_dom = '@attg.co.th';
+	$ldap_usr_dom = $GLOBALS['ldap_usr_dom'];
+	
 
 	// connect to active directory
 	$ldap = ldap_connect($ldap_host);

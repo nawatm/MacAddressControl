@@ -29,6 +29,7 @@
 
         function execQueryArray($cmd)
         {
+            //ini_set('mssql.charset', 'TIS-620');
             $this->dataObj = array();
             $queryObj = mssql_query($cmd);
             if(mssql_num_rows($queryObj))
@@ -36,6 +37,24 @@
                 while($row = mssql_fetch_assoc($queryObj))
                 {
                     $this->dataObj[] = $row;
+                }
+            }
+            mssql_free_result($queryObj);
+            return $this->dataObj;
+        }
+
+        function execQueryArray2($cmd)
+        {
+            //ini_set('mssql.charset', 'TIS-620');
+            $this->dataObj = array();
+            $queryObj = mssql_query($cmd);
+            if(mssql_num_rows($queryObj))
+            {
+                while($row = mssql_fetch_assoc($queryObj))
+                {
+                    //$this->dataObj[] = $row;
+                    $this->dataObj["Mac"] = iconv("TIS-620","UTF-8",$row["Mac"]);
+                    $this->dataObj["UserName"] = iconv("TIS-620","UTF-8",$row["UserName"]);
                 }
             }
             mssql_free_result($queryObj);

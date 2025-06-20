@@ -1,7 +1,7 @@
 <?php
     /* ========== Active Directory Setting ==========*/
     // Active Directory server
-	$ldap_host = "10.20.2.10";
+	$ldap_host = "10.123.16.9";
 
 	// Active Directory DN
 	$ldap_dn = "OU=IT-IT Promotion,OU=6.ATT,DC=attg,DC=co,DC=th";
@@ -24,7 +24,7 @@
      $db_name = "CR";
 */
 	
-     $db_server = "10.20.2.12";
+     $db_server = "10.44.40.22";
      $db_user = "compinventory";
      $db_pwd = "@ttg@dm!n$";
      $db_name = "CR";

@@ -33,18 +33,18 @@ if(isset($error))
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
   <meta http-equiv="x-ua-compatible" content="IE=11">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.0.5/es6-promise.auto.min.js"></script> 
+  <script src="js/es6-promise.auto.min.js"></script> 
   
-  <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="js/jquery-1.11.1.min.js"></script>
   <!--  <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script> -->
     <script type="text/javascript" src="Scripts/bootstrap.js"></script>
     <link href="Content/bootstrap.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="Content/login.css">
 
 
-    <script src="https://cdn.jsdelivr.net/sweetalert2/6.2.1/sweetalert2.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/sweetalert2/6.2.1/sweetalert2.css">
+    <script src="js/sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="css/sweetalert2.css">
 
 
 <!-- 

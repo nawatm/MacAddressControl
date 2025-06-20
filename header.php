@@ -17,14 +17,17 @@
 
       <div id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav navbar-right">
-          <li role="presentation"><a href="">Home</a></li>
+          <li role="presentation"><a href="index.php">Home</a></li>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">MAC Address Control <span class="caret"></span></a>
             <ul class="dropdown-menu">
-              <li role="presentation"><a href="addMac.php">Add MAC</a></li>
+              <li role="presentation"><a href="addMac.php">Add MAC Address</a></li>
+              <li role="presentation"><a href="searchMac.php">Search MAC Address</a></li>
               <li><a href="uploadMac.php">Upload MAC to DHCP</a></li>
             </ul>
           </li>
+          
+          <li role="presentation"><a href="">Hi! <? echo $_SESSION['user']; ?></a></li>   
           <li role="presentation"><a href="logout.php">Logoff</a></li>
         </ul>
       </div>
